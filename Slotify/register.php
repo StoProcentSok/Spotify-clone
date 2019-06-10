@@ -22,6 +22,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SlotifyDbs</title>
     <link rel="stylesheet" type="text/css" href="assets/css/register.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/register.js"></script>
 </head>
 <body>
     <div id="background">
@@ -41,10 +44,13 @@
                         <input id="loginPassword" name="loginPassword" type="password" required>
                     </p>
                     <button type="submit" name="loginButton">Log In</button>
+                    <div class="hasAccountText">
+                        <span id="hideLogin">Don't have an account yet? Sign up here</span>
+                    </div>
                 </form>
 
                 <form id="registerForm" action="register.php" method="POST">
-                    <h2>Register your account</h2>
+                    <h2>Create your free account</h2>
                     <p>
                         <?php echo $account->getError(Constants::$usernameCharacters); ?>
                         <?php echo $account->getError(Constants::$usernameTaken); ?>
@@ -84,6 +90,9 @@
                         <input id="password2" name="password2" type="password" placeholder="Confirm password" required>
                     </p>
                     <button type="submit" name="registerButton">Register</button>
+                    <div class="hasAccountText">
+                        <span id="hideRegister">Already have an account? Log in here</span>
+                    </div>
                 </form>
             </div>
         </div>
