@@ -23,8 +23,10 @@ $artist = $album->getArtist();
 		<p><?php echo $album->getNumberOfSongs(); ?> songs</p>
 
 	</div>
-
+cos dodajemy
 </div>
+
+
 
 
 <div class="tracklistContainer">
